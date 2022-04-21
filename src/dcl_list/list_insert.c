@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list.c                                             :+:      :+:    :+:   */
+/*   list_insert.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 08:48:49 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/14 11:05:19 by hbourgeo         ###   ########.fr       */
+/*   Created: 2022/04/15 10:43:23 by hbourgeo          #+#    #+#             */
+/*   Updated: 2022/04/21 12:15:48 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_cdl_list	*create_node(int num)
+void	insert_end(t_dcl_list **start, int num)
 {
-	t_cdl_list	*node;
-
-	node = (t_cdl_list *)malloc(sizeof(t_cdl_list));
-	if (!node)
-		return (NULL);
-	node->num = num;
-	node->next = NULL;
-	node->prev = NULL;
-	return (node);
-}
-
-void	insert_end(t_cdl_list **start, int num)
-{
-	t_cdl_list	*new_node;
-	t_cdl_list	*last;
+	t_dcl_list	*new_node;
+	t_dcl_list	*last;
 
 	if (*start == NULL)
 	{
@@ -50,10 +37,10 @@ void	insert_end(t_cdl_list **start, int num)
 	}	
 }
 
-void	insert_begin(t_cdl_list **start, int num)
+void	insert_begin(t_dcl_list **start, int num)
 {
-	t_cdl_list	*new_node;
-	t_cdl_list	*last;
+	t_dcl_list	*new_node;
+	t_dcl_list	*last;
 
 	if (*start == NULL)
 	{
@@ -76,16 +63,25 @@ void	insert_begin(t_cdl_list **start, int num)
 	}	
 }
 
-void	display(t_cdl_list **start)
-{
-	t_cdl_list	*tmp;
+void	fill_stack(char *argv[], t_dcl_list **stack_a)
+{	
+	long long	num;
+	size_t		i;
+	char		**array;
 
-	tmp = *start;
-	while (tmp->next != *start)
+	argv++;
+	while (*argv)
 	{
-		printf("%d\n", tmp->num);
-		tmp = tmp->next;
+		array = ft_split(*argv, ' ');
+		i = 0;
+		while (array[i])
+		{
+			num = ft_atoi(array[i]);
+			insert_end(stack_a, num);
+			i++;
+		}
+		ft_free_array(array);
+		argv++;
 	}
-	printf("%d\n", tmp->num);
 	return ;
 }
