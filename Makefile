@@ -6,7 +6,7 @@
 #    By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 07:55:41 by hbourgeo          #+#    #+#              #
-#    Updated: 2022/04/21 12:13:24 by hbourgeo         ###   ########.fr        #
+#    Updated: 2022/04/21 18:08:10 by hbourgeo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,5 +65,5 @@ MSG = "default"
  
 git: 
 	@-git add .
-	@git commit -am "`date +'%Y-%m-%d %H:%M:%S'` | $(MSG)"
+	@git commit -am "`date +'%m-%d-%Y %H:%M:%S'` | $(MSG)"
 	@-git push
