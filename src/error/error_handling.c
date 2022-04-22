@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 09:50:03 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:16:07 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 08:32:06 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_error(void)
 {
-	ft_putendl_fd("Error\n", 2);
+	ft_putendl_fd("Error", 2);
 	return ;
 }

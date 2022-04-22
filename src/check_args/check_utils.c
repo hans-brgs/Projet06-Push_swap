@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 14:03:25 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:15:10 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 08:28:53 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ size_t	argv1_check(char *arg)
 	{
 		len++;
 	}
+	ft_free_array(array);
 	if (len < 2)
 	{
 		ft_error();
 		return (1);
 	}
-	ft_free_array(array);
 	return (0);
 }
 

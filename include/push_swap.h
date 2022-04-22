@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:30:38 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:17:29 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 08:00:28 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void		rra(t_dcl_list **stack_a);
 void		rb(t_dcl_list **stack_b);
 void		rrb(t_dcl_list **stack_b);
 void		sa(t_dcl_list **stack_a);
-
 
 /* error */
 void		ft_error(void);
