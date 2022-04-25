@@ -6,13 +6,13 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 20:32:24 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:06:19 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 09:37:20 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	fill_and_check(int argc, char *argv[], t_dcl_list **stack_a)
+size_t	check_and_fill(int argc, char *argv[], t_dcl_list **stack_a)
 {
 	if (argc < 3)
 	{

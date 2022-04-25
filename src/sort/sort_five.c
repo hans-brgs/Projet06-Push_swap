@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 12:26:42 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:16:26 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 08:51:07 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ static void	push_min_top(t_dcl_list **stack_a)
 
 void	sort_five(t_dcl_list **stack_a, t_dcl_list **stack_b)
 {
-	size_t j;
-	size_t size_a;
+	size_t	j;
+	size_t	size_a;
 
 	size_a = size_list(stack_a);
 	j = 0;
-	while (j < size_a/2)
+	while (j < size_a / 2)
 	{
 		push_min_top(stack_a);
 		pb(stack_a, stack_b);

@@ -6,7 +6,7 @@
 #    By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 07:55:41 by hbourgeo          #+#    #+#              #
-#    Updated: 2022/04/22 08:37:17 by hbourgeo         ###   ########.fr        #
+#    Updated: 2022/04/22 09:20:41 by hbourgeo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,26 +32,26 @@ VPATH = $(INC_DIR) $(OBJ_DIR) $(LIBFT) $(shell find $(SRC_DIR) -type d)
 all: $(NAME) $(LIBFT)
 
 $(LIBFT) :
-	make -C libft
+	@make -C libft
 
 $(OBJ_DIR)%.o : %.c $(DEPS)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR) :
 	@mkdir -p $(OBJ_DIR)
 
 $(NAME) : $(OBJ_DIR) $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $@
+	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $@
 
 clean :
-	rm -rf $(OBJS)
-	rm -rf $(OBJ_DIR)
-	rm	valgrind-out.txt
-	make clean -C libft
+	@rm -rf $(OBJS)
+	@rm -rf $(OBJ_DIR)
+	@rm	valgrind-out.txt
+	@make clean -C libft
 
 fclean : clean
-	make fclean -C libft
-	rm -rf $(NAME)
+	@make fclean -C libft
+	@rm -rf $(NAME)
 	
 
 re : fclean all
@@ -73,7 +73,7 @@ leak:
     			./push_swap $(VAR)			\
 
 # GIT
-MSG = "default"
+MSG = ""
 git: 
 	@-git add .
 	@git commit -am "`date +'%m-%d-%Y %H:%M:%S'` | $(MSG)"

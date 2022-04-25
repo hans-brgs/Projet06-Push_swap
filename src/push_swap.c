@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:13:14 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 08:04:01 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 09:16:29 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(int argc, char *argv[])
 
 	stack_a = NULL;
 	stack_b = NULL;
-	fill_and_check(argc, argv, &stack_a);
+	check_and_fill(argc, argv, &stack_a);
 	if (stack_a == NULL)
 		return (1);
 	else

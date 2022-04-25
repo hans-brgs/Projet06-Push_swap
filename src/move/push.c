@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:00:45 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:16:10 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 08:50:43 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ void	pb(t_dcl_list **stack_a, t_dcl_list **stack_b)
 	ft_printf("pb\n");
 	return ;
 }
-

@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 14:03:25 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 08:28:53 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 10:00:49 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	argv1_check(char *arg)
 	return (0);
 }
 
-size_t	check_sign(char *array)
+static size_t	check_sign(char *array)
 {
 	size_t		j;
 	size_t		check;
@@ -61,7 +61,7 @@ size_t	check_sign(char *array)
 	return (check);
 }
 
-size_t	check_isnum(char *array)
+static size_t	check_isnum(char *array)
 {
 	size_t		j;
 	size_t		check;
@@ -88,7 +88,7 @@ size_t	check_isnum(char *array)
 	return (check);
 }
 
-size_t	check_limits(char *array)
+static size_t	check_limits(char *array)
 {
 	long long	num;
 

@@ -6,27 +6,11 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:47:07 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:16:03 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/22 08:50:22 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	display_list(t_dcl_list **start)
-{
-	t_dcl_list	*tmp;
-
-	if (isempty_list(start))
-		return ;
-	tmp = *start;
-	while (tmp->next != *start)
-	{
-		printf("%d\n", tmp->num);
-		tmp = tmp->next;
-	}
-	printf("%d\n", tmp->num);
-	return ;
-}
 
 size_t	size_list(t_dcl_list **start)
 {
