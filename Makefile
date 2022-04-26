@@ -6,7 +6,7 @@
 #    By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 07:55:41 by hbourgeo          #+#    #+#              #
-#    Updated: 2022/04/22 09:20:41 by hbourgeo         ###   ########.fr        #
+#    Updated: 2022/04/26 08:26:18 by hbourgeo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ $(NAME) : $(OBJ_DIR) $(OBJS) $(LIBFT)
 clean :
 	@rm -rf $(OBJS)
 	@rm -rf $(OBJ_DIR)
-	@rm	valgrind-out.txt
+	@rm	-rf *.txt
 	@make clean -C libft
 
 fclean : clean
@@ -74,8 +74,8 @@ leak:
 
 # GIT
 MSG = ""
-git: 
-	@-git add .
+git: fclean
+	@git add .
 	@git commit -am "`date +'%m-%d-%Y %H:%M:%S'` | $(MSG)"
-	@-git push
+	@git push
 	

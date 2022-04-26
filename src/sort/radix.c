@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 12:05:12 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/21 12:16:23 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/26 08:20:49 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	simplify(t_dcl_list **start, t_dcl_list *start_copy)
 	return ;
 }
 
-static size_t	get_max(t_dcl_list **stack_a)
+static size_t	get_max_bits(t_dcl_list **stack_a)
 {
 	size_t		size_a;
 	size_t		max_num;
@@ -65,7 +65,7 @@ void	radix(t_dcl_list **stack_a, t_dcl_list **stack_b)
 	i = 0;
 	size_a = size_list(stack_a);
 	tmp = *stack_a;
-	while (i < get_max(stack_a))
+	while (i < get_max_bits(stack_a))
 	{
 		j = 0;
 		while (j < size_a)
