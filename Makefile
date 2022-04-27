@@ -6,7 +6,7 @@
 #    By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 07:55:41 by hbourgeo          #+#    #+#              #
-#    Updated: 2022/04/27 08:36:15 by hbourgeo         ###   ########.fr        #
+#    Updated: 2022/04/27 09:32:12 by hbourgeo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,8 @@ re : fclean all
 print-%: ; @echo $* = $($*)
 
 # VALGRIND
-VAR = "2 1 5 4 21 12"
+file = "test"
+VAR = $(shell cat ${file})
 leak:
 	@valgrind	--leak-check=full			\
 				--show-leak-kinds=all		\
