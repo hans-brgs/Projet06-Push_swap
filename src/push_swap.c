@@ -6,11 +6,10 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:13:14 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 09:16:29 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/27 08:54:01 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "push_swap.h"
 
 static void	sort_choice(t_dcl_list **stack_a, t_dcl_list **stack_b)
@@ -46,7 +45,7 @@ int	main(int argc, char *argv[])
 	stack_b = NULL;
 	check_and_fill(argc, argv, &stack_a);
 	if (stack_a == NULL)
-		return (1);
+		return (0);
 	else
 	{
 		sort_choice(&stack_a, &stack_b);

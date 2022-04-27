@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 12:26:42 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 08:51:07 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/26 21:57:03 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 static void	push_min_top(t_dcl_list **stack_a)
 {
 	size_t	pos;
+	size_t	size;
 	int		min;
 
-	pos = 0;
-	min = 0;
 	pos = get_min_position(stack_a);
 	min = get_value(stack_a, pos);
+	size = size_list(stack_a);
 	while ((*stack_a)->num != min)
 	{
-		if (pos > 1)
+		if (pos >= size / 2)
 			rra(stack_a);
 		else
 			ra(stack_a);

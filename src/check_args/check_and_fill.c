@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 20:32:24 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 09:37:20 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/27 08:55:39 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 size_t	check_and_fill(int argc, char *argv[], t_dcl_list **stack_a)
 {
-	if (argc < 3)
-	{
-		if (argv1_check(argv[1]) == 1)
-			return (1);
-	}
+	if (argc == 1)
+		return (1);
 	if (argv_check(argv) == 1)
 		return (1);
 	fill_stack(argv, stack_a);

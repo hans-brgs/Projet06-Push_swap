@@ -6,31 +6,11 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 14:03:25 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 10:00:49 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/27 08:55:03 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-size_t	argv1_check(char *arg)
-{
-	size_t	len;
-	char	**array;
-
-	len = 0;
-	array = ft_split(arg, ' ');
-	while (array[len])
-	{
-		len++;
-	}
-	ft_free_array(array);
-	if (len < 2)
-	{
-		ft_error();
-		return (1);
-	}
-	return (0);
-}
 
 static size_t	check_sign(char *array)
 {
@@ -49,7 +29,7 @@ static size_t	check_sign(char *array)
 	}
 	if (sign == 1)
 	{
-		if (array[0] == '-' || array[0] == '+')
+		if ((array[0] == '-' || array[0] == '+') && ft_isdigit(array[1]))
 			check = 0;
 		else
 			check = 1;

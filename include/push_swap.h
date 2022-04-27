@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:30:38 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/22 10:01:09 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/27 08:55:15 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_dcl_list
 
 /* check args */
 size_t		check_and_fill(int argc, char *argv[], t_dcl_list **stack_a);
-size_t		argv1_check(char *arg);
 size_t		argv_check(char *argv[]);
 
 /* list */
