@@ -6,7 +6,7 @@
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:43:23 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/04/25 07:44:41 by hbourgeo         ###   ########.fr       */
+/*   Updated: 2022/04/29 07:50:08 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	insert_begin(t_dcl_list **start, int num)
 
 void	fill_stack(char *argv[], t_dcl_list **stack_a)
 {	
-	int	num;
+	int			num;
 	size_t		i;
 	char		**array;
 
