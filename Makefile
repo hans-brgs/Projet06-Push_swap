@@ -6,7 +6,7 @@
 #    By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 07:55:41 by hbourgeo          #+#    #+#              #
-#    Updated: 2022/04/27 09:32:12 by hbourgeo         ###   ########.fr        #
+#    Updated: 2022/05/24 06:42:45 by hbourgeo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ re : fclean all
 .PHONY : clean fclean all re
 
 # Print variable content
-print-%: ; @echo $* = $($*)
+# print-%: ; @echo $* = $($*)
 
 # VALGRIND
 file = "test"
